@@ -35,7 +35,7 @@ public class JsonSerializer<T> {
             } catch (IllegalAccessException e) {
                 continue;
             }
-            result.put(field.getName(), value.toString());
+            result.put(field.getName(), value);
         }
 
         return result;

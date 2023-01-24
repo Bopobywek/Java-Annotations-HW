@@ -15,6 +15,6 @@ class PersonSerializerTest {
         JSONObject json = new JsonSerializer<>(Person.class).serialize(p);
         assertEquals("Ivan", json.get("firstName"));
         assertEquals("Ivanov", json.get("lastName"));
-        assertEquals("1997-11-02", json.get("birthDate"));
+        assertEquals(LocalDate.of(1997, 11, 2), json.get("birthDate"));
     }
 }
